@@ -1,0 +1,58 @@
+import { BottomBar, Slide } from "@deckio/deck-engine";
+import styles from "./WorkflowRisksSlide.module.css";
+
+const risks = [
+  {
+    title: "Shared Accounts",
+    detail:
+      "Role-based inboxes and shared credentials prevent individual accountability. When an account is compromised, attribution and containment become exponentially harder.",
+  },
+  {
+    title: "Personal & Volunteer Devices",
+    detail:
+      "Unmanaged devices are a top attack surface (MDDR 2025). BYOD environments and volunteer-owned technology create endpoints beyond your organisation's visibility, where critical attack activity can occur outside the reach of endpoint detection and response.",
+  },
+  {
+    title: "Stale Access Rights",
+    detail:
+      "Access often persists long after staff leave or volunteers finish engagements. Dormant accounts with residual permissions are a known and actively exploited attack vector.",
+  },
+  {
+    title: "Third-Party Tools & Integrations",
+    detail:
+      "Cloud tools adopted for fundraising, collaboration or service delivery may process sensitive data without adequate security controls or vetting.",
+  },
+];
+
+export default function WorkflowRisksSlide({ index }) {
+  return (
+    <Slide index={index} className={styles.workflowRisks}>
+      <div className="accent-bar" />
+      <div className={`orb ${styles.orb1}`} />
+      <div className={`orb ${styles.orb2}`} />
+
+      <div className={`${styles.body} content-frame content-gutter`}>
+        <div className={styles.header}>
+          <p className={styles.eyebrow}>Common Vulnerabilities</p>
+          <h2>Risk Hides in Everyday Workflows</h2>
+          <p className={styles.subtitle}>
+            Operational convenience often comes at a security cost — and the gap
+            is rarely visible until an incident occurs.
+          </p>
+        </div>
+
+        <div className={styles.cards}>
+          {risks.map((r, i) => (
+            <div key={r.title} className={styles.card}>
+              <span className={styles.cardNumber}>0{i + 1}</span>
+              <strong className={styles.cardTitle}>{r.title}</strong>
+              <p className={styles.cardDetail}>{r.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <BottomBar text="Digital Security for Nonprofit Leaders" />
+    </Slide>
+  );
+}

@@ -1,0 +1,112 @@
+.agenda {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 400px;
+  height: 400px;
+  top: -80px;
+  right: -60px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple) 25%, transparent) 55%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 300px;
+  height: 300px;
+  bottom: -40px;
+  right: 120px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--accent),
+    color-mix(in srgb, var(--cyan) 20%, transparent) 60%,
+    transparent 78%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+}
+
+.header h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--foreground);
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--muted-foreground);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 20px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.number {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+  min-width: 36px;
+  line-height: 1;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.2px;
+}
+
+.itemDesc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted-foreground);
+}

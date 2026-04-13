@@ -1,84 +1,65 @@
-# DECKIO Starter
+# Built with [DECKIO](https://deckio.art)
 
-A Dev Container template that spins up a [DECKIO](https://deckio.art/) presentation project in seconds — no local dependencies required.
+## How to edit this deck?
 
-## What is DECKIO?
+For a smooth ride, use `Dev Containers` locally or use `GitHub Codespaces`. That saves you from installing dependencies yourself. Once the container is up and running, the presentation starts in a simple browser session shared with GitHub Copilot and you can start editing.
 
-[DECKIO](https://github.com/deckio-art/deck-engine) is a presentation framework powered by `@deckio/deck-engine`. It is designed to be driven by GitHub Copilot in Agent mode: you describe the slide you want, Copilot edits the deck files, and the browser preview hot-reloads instantly.
+If you want to run it directly on your machine:
 
-## What this repo does
+```bash
+npm install
+npm run dev
+```
 
-When you open this repository in a Dev Container (locally or via GitHub Codespaces), the container:
+Open http://localhost:5173 in your browser.
 
-1. Scaffolds a new DECKIO project with `create-deckio` into the working directory.
-2. Installs all npm dependencies.
-3. Creates an initial git commit.
-4. Forwards port `5173` and opens a live preview in VS Code's Simple Browser.
+Typical flow after GitHub Copilot is ready and the presentation is visible in Simple Browser:
 
-The result is a fully working DECKIO presentation project, ready for you to start building slides with GitHub Copilot.
+1. Ask GitHub Copilot to make the change you want.
+2. Let GitHub Copilot update the deck files for you.
+3. Review what changed.
+4. Look at the presentation and see the result immediately in real time, thanks to hot reload.
+5. If something feels off, ask GitHub Copilot to refine it and repeat.
 
-## Getting started
+## GitHub Copilot in VS Code
 
-### Option 1 — GitHub Codespaces (recommended, zero setup)
+Do not make deck changes by editing code directly unless you really need to. This project is set up so GitHub Copilot in VS Code can do most of the work for you.
 
-Click **Code → Codespaces → Create codespace on main** in the GitHub UI. The container will build and the presentation preview will open automatically.
+Use GitHub Copilot Chat in Agent mode and describe the change you want. You can choose the model you like, but we recommend frontier models, `Claude Opus 4.6` or `GPT-5.3+`, for the best experience.
 
-### Option 2 — Dev Container locally
+The optimal flow is achieved with `Claude Opus 4.6` in fast mode.
 
-Prerequisites: [Docker](https://www.docker.com/) and the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) for VS Code.
+## What Copilot already knows
 
-1. Clone this repository:
+This repo includes custom instructions and skills. Copilot already knows what files it should touch and what files it should leave alone.
 
-   ```bash
-   git clone https://github.com/DevSecNinja/deckio-starter.git
-   cd deckio-starter
-   ```
+Useful skills:
 
-2. Open in VS Code and, when prompted, click **Reopen in Container** — or run the **Dev Containers: Reopen in Container** command.
-3. Wait for the container to build and the bootstrap script to finish. The presentation will open at `http://localhost:5173`.
+- `deck-add-slide` for creating a new slide and wiring it into `deck.config.js`
+- `deck-delete-slide` for removing a slide cleanly
+- `deck-inspect` for visually checking a rendered slide
+- `deck-port-powerpoint` for rebuilding a PowerPoint or PDF deck as native DECKIO slides
+- `deck-validate-project` for auditing the whole deck for consistency
+- `deck-sketch` for turning a rough whiteboard idea into a real slide
 
-## Building slides with GitHub Copilot
+## Prompt examples
 
-Once the container is running and the presentation is visible, use GitHub Copilot Chat in **Agent mode** to drive all deck changes. Use a frontier model such as Claude Sonnet or GPT-4o for best results.
-
-Example prompts:
+Use prompts like these instead of editing files yourself:
 
 - `Add a slide that explains the rollout phases for strategic customers.`
 - `Make this slide easier to scan and easier to present.`
 - `Remove the speaker invite slide.`
 - `Review this deck and fix anything that looks inconsistent or broken.`
+- `Create a customer case study slide that fits the style of the rest of the presentation.`
 - `Create a new slide based on my sketch.`
+- `Inspect the current progress, tell me what looks off, and make visual improvements.`
 
-Copilot already knows which files to touch thanks to the built-in instructions and skills included by `create-deckio`.
+## GitHub Copilot CLI
 
-## Pre-installed VS Code extensions
+Open GitHub Copilot CLI in this repo:
 
-The Dev Container ships with:
-
-| Extension | Purpose |
-|---|---|
-| GitHub Copilot + Copilot Chat | Drive deck changes with natural language |
-| GitLens + Git Graph | GitOps workflow |
-| Prettier | Format on save |
-| ESLint | Code quality |
-
-## Optional: download source assets
-
-If your deck references offline PDF assets, run the included helper script once to download them into `assets/`:
+Do you prefer TUIs? This works with GitHub Copilot CLI too.
 
 ```bash
-chmod +x setup.sh && ./setup.sh
+gh copilot --yolo
 ```
-
-The `assets/` directory is git-ignored and is not committed to the repository.
-
-## Links
-
-- [DECKIO website](https://deckio.art/)
-- [deck-engine repository](https://github.com/deckio-art/deck-engine)
-- [Dev Containers documentation](https://containers.dev/)
-- [GitHub Codespaces documentation](https://docs.github.com/en/codespaces)
-
-## License
-
-MIT — see [LICENSE](LICENSE).

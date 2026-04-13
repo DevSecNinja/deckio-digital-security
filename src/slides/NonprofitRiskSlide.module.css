@@ -1,0 +1,193 @@
+.nonprofitRisk {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 420px;
+  height: 420px;
+  top: -90px;
+  right: -50px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--accent),
+    color-mix(in srgb, var(--purple) 30%, transparent) 55%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 280px;
+  height: 280px;
+  bottom: -30px;
+  left: 80px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--pink),
+    color-mix(in srgb, var(--pink) 20%, transparent) 60%,
+    transparent 78%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+}
+
+.header h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--foreground);
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--muted-foreground);
+}
+
+.dualBar {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dualSide {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 18px;
+}
+
+.dualSide strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--foreground);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.dualSide p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dualIcon {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.dualOpportunity {
+  border-left: 3px solid var(--green);
+}
+
+.dualRisk {
+  border-right: 3px solid var(--pink);
+}
+
+.dualDivider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--accent));
+  opacity: 0.6;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardIcon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.3px;
+}
+
+.cardPoints {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardPoints li {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+  padding-left: 14px;
+  position: relative;
+}
+
+.cardPoints li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  opacity: 0.7;
+}

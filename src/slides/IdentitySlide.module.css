@@ -1,0 +1,171 @@
+.identity {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 460px;
+  height: 460px;
+  top: -100px;
+  right: -70px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--accent),
+    color-mix(in srgb, var(--cyan) 30%, transparent) 55%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 300px;
+  height: 300px;
+  bottom: -40px;
+  left: 60px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 20%, transparent) 60%,
+    transparent 78%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+}
+
+.header h2 {
+  font-size: clamp(28px, 3vw, 46px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--foreground);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.concept {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conceptText {
+  font-size: 15px;
+  color: var(--muted-foreground);
+  line-height: 1.65;
+}
+
+.conceptText strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.quote {
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quote p {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--foreground);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.quote cite {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  font-style: normal;
+}
+
+.sourceNote {
+  font-size: 11px;
+  color: var(--muted-foreground);
+  opacity: 0.65;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionsLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted-foreground);
+  margin-bottom: 4px;
+}
+
+.action {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.actionNum {
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--background);
+  flex-shrink: 0;
+}
+
+.actionLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--foreground);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.actionDetail {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+}

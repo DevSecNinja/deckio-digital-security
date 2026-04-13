@@ -1,0 +1,147 @@
+.landscape {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 440px;
+  height: 440px;
+  top: -100px;
+  right: -60px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--cyan),
+    color-mix(in srgb, var(--accent) 25%, transparent) 55%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 320px;
+  height: 320px;
+  bottom: -50px;
+  left: 60px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple) 20%, transparent) 60%,
+    transparent 78%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+}
+
+.header h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--foreground);
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--muted-foreground);
+  max-width: 680px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.7;
+}
+
+.card--cyan::before {
+  background: linear-gradient(90deg, var(--cyan), var(--accent));
+}
+
+.card--purple::before {
+  background: linear-gradient(90deg, var(--purple), var(--purple-deep));
+}
+
+.card--green::before {
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+}
+
+.statValue {
+  font-size: clamp(40px, 4vw, 56px);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: var(--foreground);
+}
+
+.card--cyan .statValue {
+  color: var(--cyan);
+}
+.card--purple .statValue {
+  color: var(--purple);
+}
+.card--green .statValue {
+  color: var(--green);
+}
+
+.statLabel {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--foreground);
+}
+
+.statDetail {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+  margin-top: 4px;
+}
+
+.source {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  opacity: 0.65;
+}

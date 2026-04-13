@@ -1,0 +1,134 @@
+.sources {
+  background: var(--background);
+  padding: 0 0 44px 0;
+}
+
+.orb1 {
+  width: 360px;
+  height: 360px;
+  top: -70px;
+  right: -50px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--blue-glow),
+    color-mix(in srgb, var(--accent) 20%, transparent) 55%,
+    transparent 72%
+  );
+}
+
+.orb2 {
+  width: 260px;
+  height: 260px;
+  bottom: -30px;
+  left: 80px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--purple-deep),
+    color-mix(in srgb, var(--purple-deep) 15%, transparent) 60%,
+    transparent 78%
+  );
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+}
+
+.header h2 {
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--foreground);
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted-foreground);
+  max-width: 700px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.source {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.sourceId {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  min-width: 24px;
+  padding-top: 1px;
+}
+
+.sourceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sourceClaim {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.4;
+}
+
+.sourceCitation {
+  font-size: 11px;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+}
+
+.sourceUrl {
+  font-size: 10px;
+  color: var(--accent);
+  opacity: 0.75;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+.mddtBadge {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--cyan);
+  background: color-mix(in srgb, var(--cyan) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cyan) 30%, transparent);
+  border-radius: 4px;
+  padding: 2px 6px;
+  align-self: flex-start;
+}
