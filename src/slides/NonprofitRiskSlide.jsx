@@ -3,6 +3,14 @@ import styles from "./NonprofitRiskSlide.module.css";
 
 const reasons = [
   {
+    icon: "🏛",
+    title: "Nation-State Interest",
+    points: [
+      "Organisations working in conflict zones, human rights, or governance reform are high-value surveillance targets",
+      "Nonprofits hold sensitive data — beneficiary records, policy positions, donor networks — that can be leveraged to disrupt civil society",
+    ],
+  },
+  {
     icon: "🗂",
     title: "Valuable Data",
     points: [

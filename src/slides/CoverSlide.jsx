@@ -29,13 +29,6 @@ export default function CoverSlide({ index }) {
             </div>
             <div className={styles.metaDivider} />
             <div className={styles.metaItem}>
-              <span className={styles.metaLabel}>Track</span>
-              <span className={styles.metaValue}>
-                Leadership &amp; Strategy
-              </span>
-            </div>
-            <div className={styles.metaDivider} />
-            <div className={styles.metaItem}>
               <span className={styles.metaLabel}>Audience</span>
               <span className={styles.metaValue}>Nonprofit Leaders</span>
             </div>

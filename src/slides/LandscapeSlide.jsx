@@ -55,6 +55,26 @@ export default function LandscapeSlide({ index }) {
           ))}
         </div>
 
+        <div className={styles.callout}>
+          <span className={styles.calloutIcon} aria-hidden="true">
+            🛡
+          </span>
+          <div>
+            <strong className={styles.calloutTitle}>
+              Microsoft disrupted Tycoon2FA
+            </strong>
+            <p className={styles.calloutText}>
+              Tycoon2FA was an industrial-scale phishing-as-a-service platform
+              that intercepted login sessions in real time — bypassing MFA for
+              over 100,000 organisations since 2023. In March 2026, Microsoft
+              seized the infrastructure behind the operation, disrupting one of
+              the most prolific credential-theft services in active use. For
+              nonprofits, this is a reminder: even with MFA enabled, attackers
+              had toolkits specifically designed to get around it.
+            </p>
+          </div>
+        </div>
+
         <p className={styles.source}>
           Source: Microsoft Security Blog, Apr 2026 · Microsoft Digital Defense
           Report 2025

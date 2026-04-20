@@ -53,7 +53,9 @@ export default function IdentitySlide({ index }) {
           </div>
 
           <div className={styles.actions}>
-            <p className={styles.actionsLabel}>Three Leadership Actions</p>
+            <p className={styles.actionsLabel}>
+              Three Actions to Protect Your Identities
+            </p>
             {actions.map((a, i) => (
               <div key={a.label} className={styles.action}>
                 <span className={styles.actionNum}>{i + 1}</span>
