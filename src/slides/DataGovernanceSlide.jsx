@@ -4,23 +4,23 @@ import styles from "./DataGovernanceSlide.module.css";
 const pillars = [
   {
     number: "01",
-    title: "Know Your Data",
+    title: "Know your data",
     detail:
-      "Most organisations find only a small percentage of their data is truly sensitive. Identify that data first — where it lives, who can access it, and how it flows. If only 1% of your data is sensitive, go after that 1% and lock those systems down.",
+      "Most organizations find only a small percentage of their data is truly sensitive. Identify that data first—where it lives, who can access it, and how it flows. If only 1% of your data is sensitive, go after that 1% and lock those systems down.",
     accent: "cyan",
   },
   {
     number: "02",
-    title: "Classify & Control",
+    title: "Classify & control",
     detail:
       "Not all data requires the same level of protection. Apply access controls based on sensitivity: beneficiary records, donor financials, and safeguarding data deserve the highest tier.",
     accent: "purple",
   },
   {
     number: "03",
-    title: "Review Regularly",
+    title: "Review regularly",
     detail:
-      "Access rights drift over time as roles change and people leave. Build regular access reviews into your governance calendar — even a quarterly check can significantly reduce exposure.",
+      "Access rights drift over time as roles change and people leave. Build regular access reviews into your governance calendar—even a quarterly check can significantly reduce exposure.",
     accent: "green",
   },
 ];
@@ -35,9 +35,9 @@ export default function DataGovernanceSlide({ index }) {
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
           <p className={styles.eyebrow}>Data Governance</p>
-          <h2>Data Governance as Mission Protection</h2>
+          <h2>Data governance as mission protection</h2>
           <p className={styles.subtitle}>
-            Knowing what data you hold — and who can reach it — is a leadership
+            Knowing what data you hold—and who can reach it—is a leadership
             responsibility, not a technical one.
           </p>
         </div>

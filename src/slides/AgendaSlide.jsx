@@ -4,28 +4,28 @@ import styles from "./AgendaSlide.module.css";
 const agenda = [
   {
     number: "01",
-    title: "The Evolving Threat Landscape",
-    desc: "How AI has changed the speed, precision and scale of cyberattacks",
+    title: "The evolving threat landscape",
+    desc: "How AI has changed the speed, precision, and scale of cyberattacks",
   },
   {
     number: "02",
-    title: "Why Nonprofits Are Targeted",
+    title: "Why nonprofits are targeted",
     desc: "Mission-driven work creates real and underestimated digital risk",
   },
   {
     number: "03",
-    title: "Risk in Everyday Workflows",
+    title: "Risk in everyday workflows",
     desc: "Where common operational patterns silently introduce vulnerabilities",
   },
   {
     number: "04",
-    title: "Identity, Access & Data Governance",
-    desc: "The three pillars of a sound organisational security posture",
+    title: "Identity, access & data governance",
+    desc: "The three pillars of a sound organizational security posture",
   },
   {
     number: "05",
-    title: "Building Your Security Baseline",
-    desc: "Practical priorities for resource-constrained organisations",
+    title: "Building your security baseline",
+    desc: "Practical priorities for resource-constrained organizations",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function AgendaSlide({ index }) {
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
           <p className={styles.eyebrow}>Session Overview</p>
-          <h2>What We&rsquo;ll Cover Today</h2>
+          <h2>What we&rsquo;ll cover today</h2>
           <p className={styles.subtitle}>
             A strategic, non-technical lens on digital security for nonprofit
             leaders

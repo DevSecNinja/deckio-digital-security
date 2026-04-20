@@ -15,7 +15,7 @@ const actions = [
   {
     label: "Adopt Zero Trust principles",
     detail:
-      "Verify explicitly, use least-privilege access, and assume breach. Start with identity: every access request is authenticated, authorised, and continuously validated — regardless of network location. (MDDR 2025)",
+      "Verify explicitly, use least-privilege access, and assume breach. Start with identity: every access request is authenticated, authorized, and continuously validated—regardless of network location. (MDDR 2025)",
   },
 ];
 
@@ -29,14 +29,14 @@ export default function IdentitySlide({ index }) {
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
           <p className={styles.eyebrow}>Identity &amp; Access</p>
-          <h2>Identity Is the New Perimeter</h2>
+          <h2>Identity is the new perimeter</h2>
         </div>
 
         <div className={styles.layout}>
           <div className={styles.concept}>
             <p className={styles.conceptText}>
               The traditional network boundary no longer defines your
-              organisation&rsquo;s security. Today,{" "}
+              organization&rsquo;s security. Today,{" "}
               <strong>who can access what</strong> is the primary security
               boundary.
             </p>
@@ -54,7 +54,7 @@ export default function IdentitySlide({ index }) {
 
           <div className={styles.actions}>
             <p className={styles.actionsLabel}>
-              Three Actions to Protect Your Identities
+              Three actions to protect your identities
             </p>
             {actions.map((a, i) => (
               <div key={a.label} className={styles.action}>

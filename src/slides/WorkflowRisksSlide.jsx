@@ -3,24 +3,24 @@ import styles from "./WorkflowRisksSlide.module.css";
 
 const risks = [
   {
-    title: "Shared Accounts",
+    title: "Shared accounts",
     detail:
       "Role-based inboxes and shared credentials prevent individual accountability. When an account is compromised, attribution and containment become exponentially harder.",
   },
   {
-    title: "Personal & Volunteer Devices",
+    title: "Personal & volunteer devices",
     detail:
-      "Unmanaged devices are a top attack surface (MDDR 2025). BYOD environments and volunteer-owned technology create endpoints beyond your organisation's visibility, where critical attack activity can occur outside the reach of endpoint detection and response.",
+      "Unmanaged devices are a top attack surface (MDDR 2025). BYOD and volunteer-owned devices create blind spots—endpoints where attacks can happen beyond your organization's detection reach.",
   },
   {
-    title: "Stale Access Rights",
+    title: "Stale access rights",
     detail:
       "Access often persists long after staff leave or volunteers finish engagements. Dormant accounts with residual permissions are a known and actively exploited attack vector.",
   },
   {
-    title: "Third-Party Tools & Integrations",
+    title: "Third-party tools & integrations",
     detail:
-      "Cloud tools adopted for fundraising, collaboration or service delivery may process sensitive data without adequate security controls or vetting.",
+      "Cloud tools adopted for fundraising, collaboration, or service delivery may process sensitive data without adequate security controls or vetting.",
   },
 ];
 
@@ -34,9 +34,9 @@ export default function WorkflowRisksSlide({ index }) {
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
           <p className={styles.eyebrow}>Common Vulnerabilities</p>
-          <h2>Risk Hides in Everyday Workflows</h2>
+          <h2>Risk hides in everyday workflows</h2>
           <p className={styles.subtitle}>
-            Operational convenience often comes at a security cost — and the gap
+            Operational convenience often comes at a security cost—and the gap
             is rarely visible until an incident occurs.
           </p>
         </div>

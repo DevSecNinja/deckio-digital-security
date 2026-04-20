@@ -7,12 +7,12 @@ const steps = [
     action: "Understand your current exposure",
     questions: [
       "What sensitive data do we hold and where does it live?",
-      "Who has access to critical systems — and do they still need it?",
+      "Who has access to critical systems—and do they still need it?",
       "What happens if we lose access for 24 hours?",
     ],
   },
   {
-    phase: "Prioritise",
+    phase: "Prioritize",
     action: "Focus on the highest-impact areas first",
     questions: [
       "Have we enabled MFA for all staff and volunteers?",
@@ -24,7 +24,7 @@ const steps = [
     phase: "Act",
     action: "Implement foundational controls",
     questions: [
-      "Create an owner for each security action — not just IT",
+      "Create an owner for each security action—not just IT",
       "Set achievable milestones within a 90-day window",
       "Establish a backup and patch cadence with accountability",
     ],
@@ -50,9 +50,9 @@ export default function NextStepsSlide({ index }) {
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
           <p className={styles.eyebrow}>Starting the Journey</p>
-          <h2>Where to Start: A Leadership Framework</h2>
+          <h2>Where to start: A leadership framework</h2>
           <p className={styles.subtitle}>
-            You don&rsquo;t need to solve everything at once — but you do need
+            You don&rsquo;t need to solve everything at once—but you do need
             to start somewhere. Build from here.
           </p>
         </div>

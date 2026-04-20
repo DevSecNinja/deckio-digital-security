@@ -4,33 +4,33 @@ import styles from "./BaselineSlide.module.css";
 const controls = [
   {
     number: "1",
-    title: "Enable MFA Everywhere",
+    title: "Enable MFA everywhere",
     detail:
       "Multi-factor authentication is the single highest-impact control for blocking credential-based attacks. Require it for all users, especially administrators.",
   },
   {
     number: "2",
-    title: "Patch & Update Systems",
+    title: "Patch & update systems",
     detail:
-      "Vulnerability exploitation remains one of the most reliable methods of initial access (MDDR 2025). Establish a regular patching cycle across all platforms — including cloud tools and mobile devices.",
+      "Vulnerability exploitation remains one of the most reliable methods of initial access (MDDR 2025). Establish a regular patching cycle across all platforms—including cloud tools and mobile devices.",
   },
   {
     number: "3",
-    title: "Back Up Critical Data",
+    title: "Back up critical data",
     detail:
-      "Maintain regular, verified, ransomware-resistant backups — offline or immutable storage that attackers cannot encrypt or delete. Test restoration regularly. When ransomware hits, these backups are your lifeline.",
+      "Maintain regular, verified, ransomware-resistant backups—offline or immutable storage that attackers can't encrypt or delete. Test restoration regularly. When ransomware hits, these backups are your lifeline.",
   },
   {
     number: "4",
-    title: "Least-Privilege Access",
+    title: "Least-privilege access",
     detail:
       "Every person and system should have only the minimum access required. Excess permissions silently expand your attack surface.",
   },
   {
     number: "5",
-    title: "An Incident Response Plan",
+    title: "An incident response plan",
     detail:
-      "Know what to do — and who to call — before an incident happens. A written, practiced plan dramatically reduces damage and recovery time.",
+      "Know what to do—and who to call—before an incident happens. A written, practiced plan dramatically reduces damage and recovery time.",
   },
 ];
 
@@ -44,10 +44,10 @@ export default function BaselineSlide({ index }) {
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
           <p className={styles.eyebrow}>Security Baseline</p>
-          <h2>Five Controls That Dramatically Reduce Risk</h2>
+          <h2>Five controls that dramatically reduce risk</h2>
           <p className={styles.subtitle}>
-            A strong security baseline does not require a large budget — it
-            requires deliberate decision-making at leadership level.
+            A strong security baseline doesn&rsquo;t require a large budget—it
+            requires deliberate decisions from leadership.
           </p>
         </div>
 

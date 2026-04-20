@@ -26,8 +26,7 @@ export default function ThankYouSlide({ index }) {
               style={{ color: "var(--accent)", textDecoration: "underline" }}
             >
               Microsoft Digital Defense Report
-            </a>{" "}
-            &mdash; and commit to one action this quarter.
+            </a>&mdash;and commit to one action this quarter.
           </p>
           <div className="deck-ty-divider" />
         </div>

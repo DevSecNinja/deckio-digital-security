@@ -4,36 +4,36 @@ import styles from "./NonprofitRiskSlide.module.css";
 const reasons = [
   {
     icon: "🏛",
-    title: "Nation-State Interest",
+    title: "Nation-state interest",
     points: [
-      "Organisations working in conflict zones, human rights, or governance reform are high-value surveillance targets",
-      "Nonprofits hold sensitive data — beneficiary records, policy positions, donor networks — that can be leveraged to disrupt civil society",
+      "Organizations working in conflict zones, human rights, or governance reform are high-value surveillance targets",
+      "Nonprofits hold sensitive data—beneficiary records, policy positions, donor networks—that can be leveraged to disrupt civil society",
     ],
   },
   {
     icon: "🗂",
-    title: "Valuable Data",
+    title: "Valuable data",
     points: [
-      "Beneficiary records — often highly sensitive (safeguarding, health, financial)",
-      "Donor financial and personal data — high demand on criminal markets",
-      "Organisational finances, grant data, and operational plans",
+      "Beneficiary records—often highly sensitive (safeguarding, health, financial)",
+      "Donor financial and personal data—high demand on criminal markets",
+      "Organizational finances, grant data, and operational plans",
     ],
   },
   {
     icon: "🤝",
-    title: "Trusted Brand",
+    title: "Trusted brand",
     points: [
-      "Your credibility can be weaponised against donors and beneficiaries",
+      "Your credibility can be weaponized against donors and beneficiaries",
       "Fraudulent donation appeals using stolen branding are common",
       "Attackers impersonate nonprofit staff in email-based fraud",
     ],
   },
   {
     icon: "⚙️",
-    title: "Constrained Resources",
+    title: "Constrained resources",
     points: [
       "Smaller dedicated IT or security capacity than commercial peers",
-      "Mixed workforce: staff, volunteers, partners — varying digital literacy",
+      "Mixed workforce: staff, volunteers, partners—varying digital literacy",
       "Budget pressure limits investment in security tools and training",
     ],
   },
@@ -49,9 +49,9 @@ export default function NonprofitRiskSlide({ index }) {
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
           <p className={styles.eyebrow}>The Risk Picture</p>
-          <h2>Why Nonprofits Are Targeted</h2>
+          <h2>Why nonprofits are targeted</h2>
           <p className={styles.subtitle}>
-            Mission-driven work creates real digital risk — one that attackers
+            Mission-driven work creates real digital risk—one that attackers
             actively exploit.
           </p>
         </div>
@@ -62,9 +62,9 @@ export default function NonprofitRiskSlide({ index }) {
               ⚡
             </span>
             <div>
-              <strong>AI as Opportunity</strong>
+              <strong>AI as opportunity</strong>
               <p>
-                AI lets nonprofits do more with less — closing capacity gaps and
+                AI lets nonprofits do more with less—closing capacity gaps and
                 scaling impact despite chronic skills shortages.
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function NonprofitRiskSlide({ index }) {
               ⚠️
             </span>
             <div>
-              <strong>AI as Risk</strong>
+              <strong>AI as risk</strong>
               <p>
                 But it also makes attacking vulnerable organizations easier and
                 more scalable.
