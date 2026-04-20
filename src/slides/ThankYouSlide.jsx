@@ -4,7 +4,6 @@ import { createElement } from "react";
 export default function ThankYouSlide({ index }) {
   return (
     <Slide index={index} className="deck-ty">
-      <div className="accent-bar" />
 
       <div className="deck-ty-glow deck-ty-glow1" />
       <div className="deck-ty-glow deck-ty-glow2" />

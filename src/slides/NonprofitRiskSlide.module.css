@@ -3,29 +3,37 @@
   padding: 0 0 44px 0;
 }
 
-.orb1 {
-  width: 420px;
-  height: 420px;
-  top: -90px;
-  right: -50px;
-  background: radial-gradient(
-    circle at 40% 40%,
-    var(--accent),
-    color-mix(in srgb, var(--purple) 30%, transparent) 55%,
-    transparent 72%
+/* ── Microsoft angular panel ── */
+.angularPanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(0, 120, 212, 0.06) 40%,
+    rgba(0, 90, 158, 0.10) 70%,
+    rgba(0, 120, 212, 0.04) 100%
   );
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.orb2 {
-  width: 280px;
-  height: 280px;
-  bottom: -30px;
-  left: 80px;
-  background: radial-gradient(
-    circle at 50% 50%,
-    var(--pink),
-    color-mix(in srgb, var(--pink) 20%, transparent) 60%,
-    transparent 78%
+.topLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 20;
+  background: linear-gradient(
+    90deg,
+    var(--ms-blue-dark) 0%,
+    var(--ms-blue) 50%,
+    var(--ms-blue-light) 100%
   );
 }
 
@@ -70,7 +78,7 @@
   gap: 0;
   background: var(--secondary);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -106,11 +114,11 @@
 }
 
 .dualOpportunity {
-  border-left: 3px solid var(--green);
+  border-left: 3px solid var(--ms-blue);
 }
 
 .dualRisk {
-  border-right: 3px solid var(--pink);
+  border-right: 3px solid var(--ms-blue);
 }
 
 .dualDivider {
@@ -130,7 +138,7 @@
   overflow: hidden;
   background: var(--secondary);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -140,12 +148,12 @@
 .card::before {
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--purple), var(--accent));
-  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--ms-blue);
+  opacity: 0.7;
 }
 
 .cardTop {

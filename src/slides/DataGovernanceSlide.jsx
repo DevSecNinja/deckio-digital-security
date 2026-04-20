@@ -28,9 +28,8 @@ const pillars = [
 export default function DataGovernanceSlide({ index }) {
   return (
     <Slide index={index} className={styles.dataGovernance}>
-      <div className="accent-bar" />
-      <div className={`orb ${styles.orb1}`} />
-      <div className={`orb ${styles.orb2}`} />
+      <div className={styles.angularPanel} />
+      <div className={styles.topLine} />
 
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
@@ -46,7 +45,7 @@ export default function DataGovernanceSlide({ index }) {
           {pillars.map((p) => (
             <div
               key={p.number}
-              className={`${styles.card} ${styles[`card--${p.accent}`]}`}
+              className={styles.card}
             >
               <span className={styles.cardNumber}>{p.number}</span>
               <strong className={styles.cardTitle}>{p.title}</strong>

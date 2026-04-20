@@ -19,8 +19,8 @@ export default {
   description:
     "A strategic, non-technical session on digital security for nonprofit leaders and decision makers.",
   icon: "🔐",
-  accent: "#6366f1",
-  theme: "dark",
+  accent: "#0078d4",
+  theme: "./src/themes/microsoft/microsoft.css",
   appearance: "dark",
   order: 1,
   slides: [

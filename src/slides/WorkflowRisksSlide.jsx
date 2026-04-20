@@ -27,9 +27,8 @@ const risks = [
 export default function WorkflowRisksSlide({ index }) {
   return (
     <Slide index={index} className={styles.workflowRisks}>
-      <div className="accent-bar" />
-      <div className={`orb ${styles.orb1}`} />
-      <div className={`orb ${styles.orb2}`} />
+      <div className={styles.angularPanel} />
+      <div className={styles.topLine} />
 
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>

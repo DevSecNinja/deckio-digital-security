@@ -1,0 +1,167 @@
+/*
+ * DECKIO — Microsoft Theme
+ *
+ * A professional dark palette rooted in Microsoft brand guidelines.
+ * Uses Microsoft Blue (#0078D4) as the primary accent, Fluent-inspired
+ * dark surfaces, and the four Microsoft logo colors as decorative accents.
+ *
+ * CSS custom properties → Tailwind utility bridge via @theme inline.
+ */
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+
+  /* ── 1. Core Semantic Colors ─────────────────────────────────────────── */
+  --background: #1b1b1b;
+  --foreground: #ffffff;
+  --card: #242424;
+  --card-foreground: #ffffff;
+  --primary: #0078d4;
+  --primary-foreground: #ffffff;
+  --secondary: #2d2d2d;
+  --secondary-foreground: #ffffff;
+  --muted: #383838;
+  --muted-foreground: #a0a0a0;
+  --accent: #0078d4;
+  --accent-foreground: #ffffff;
+  --destructive: #d13438;
+  --destructive-foreground: #ffffff;
+  --border: #404040;
+  --input: #404040;
+  --ring: rgba(0, 120, 212, 0.4);
+  --radius: 8px;
+
+  /* ── 2. Decorative Palette ───────────────────────────────────────────── */
+  /* Brand blues */
+  --ms-blue: #0078d4;
+  --ms-blue-light: #2b88d8;
+  --ms-blue-dark: #005a9e;
+  --ms-teal: #008575;
+  --ms-purple: #5c2d91;
+
+  /* Microsoft four-square logo colors (decorative only) */
+  --ms-logo-red: #f25022;
+  --ms-logo-green: #7fba00;
+  --ms-logo-blue: #00a4ef;
+  --ms-logo-yellow: #ffb900;
+
+  /* Legacy-compatible aliases so theme-agnostic code still resolves */
+  --blue-glow: #0078d4;
+  --purple: #5c2d91;
+  --purple-deep: #4b2380;
+  --pink: #d13438;
+  --cyan: #008575;
+  --green: #7fba00;
+
+  /* ── 3. Derived Overlays & Glows ─────────────────────────────────────── */
+  --surface-overlay: rgba(36, 36, 36, 0.8);
+  --surface-overlay-heavy: rgba(27, 27, 27, 0.95);
+  --background-overlay: rgba(27, 27, 27, 0.85);
+  --border-subtle: rgba(64, 64, 64, 0.6);
+  --glow-primary: rgba(0, 120, 212, 0.15);
+  --glow-primary-strong: rgba(0, 120, 212, 0.22);
+  --glow-primary-shadow: rgba(0, 120, 212, 0.18);
+  --glow-ring: rgba(0, 164, 239, 0.18);
+  --glow-accent: rgba(0, 120, 212, 0.1);
+  --glow-purple: rgba(92, 45, 145, 0.1);
+  --glow-cyan: rgba(0, 133, 117, 0.08);
+  --dot-color: rgba(160, 160, 160, 0.15);
+  --destructive-subtle: rgba(209, 52, 56, 0.04);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* ── 4. Presentation Layout ──────────────────────────────────────────── */
+  --slide-bg: var(--background);
+  --content-max-width: 1280px;
+  --content-gutter: 72px;
+
+  /* ── 5. Typography Scale ─────────────────────────────────────────────── */
+  --font-family:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size-2xs: 10px;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-md: 13px;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-display: clamp(40px, 6vw, 64px);
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --letter-spacing-tight: -2px;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.5px;
+  --letter-spacing-wider: 2.5px;
+  --letter-spacing-widest: 3px;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ── 6. Spacing Scale (4 px base) ────────────────────────────────────── */
+  --space-0: 0px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+  --space-14: 56px;
+
+  /* ── 7. Border Radius Scale ──────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-full: 50%;
+
+  /* ── 8. Z-Index Scale ────────────────────────────────────────────────── */
+  --z-content: 2;
+  --z-bar: 100;
+  --z-nav: 200;
+  --z-progress: 300;
+  --z-overlay: 9999;
+
+  /* ── 9. Transitions ──────────────────────────────────────────────────── */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+  --ease-slide: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-slide: 0.6s;
+  --duration-progress: 0.5s;
+}
+
+/* ── Tailwind ↔ CSS variable bridge ── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius: var(--radius);
+}

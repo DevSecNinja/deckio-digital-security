@@ -28,9 +28,8 @@ const stats = [
 export default function LandscapeSlide({ index }) {
   return (
     <Slide index={index} className={styles.landscape}>
-      <div className="accent-bar" />
-      <div className={`orb ${styles.orb1}`} />
-      <div className={`orb ${styles.orb2}`} />
+      <div className={styles.angularPanel} />
+      <div className={styles.topLine} />
 
       <div className={`${styles.body} content-frame content-gutter`}>
         <div className={styles.header}>
@@ -45,7 +44,7 @@ export default function LandscapeSlide({ index }) {
           {stats.map((s) => (
             <div
               key={s.value}
-              className={`${styles.card} ${styles[`card--${s.accent}`]}`}
+              className={styles.card}
             >
               <span className={styles.statValue}>{s.value}</span>
               <strong className={styles.statLabel}>{s.label}</strong>

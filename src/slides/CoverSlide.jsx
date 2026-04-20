@@ -4,10 +4,8 @@ import styles from "./CoverSlide.module.css";
 export default function CoverSlide({ index }) {
   return (
     <Slide index={index} className={styles.cover}>
-      <div className="accent-bar" />
-      <div className={`orb ${styles.orb1}`} />
-      <div className={`orb ${styles.orb2}`} />
-      <div className={`orb ${styles.orb3}`} />
+      <div className={styles.angularPanel} />
+      <div className={styles.topLine} />
 
       <div className="content-frame content-gutter">
         <div className={styles.content}>

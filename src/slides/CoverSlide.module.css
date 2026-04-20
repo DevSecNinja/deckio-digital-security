@@ -10,20 +10,38 @@
   align-items: center;
 }
 
-.orb1 {
-  width: 520px; height: 520px;
-  top: -120px; right: -80px;
-  background: radial-gradient(circle at 40% 40%, var(--accent), color-mix(in srgb, var(--green) 30%, transparent) 50%, transparent 70%);
+/* ── Microsoft angular panel ── */
+.angularPanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(0, 120, 212, 0.06) 40%,
+    rgba(0, 90, 158, 0.1) 70%,
+    rgba(0, 120, 212, 0.04) 100%
+  );
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
+  pointer-events: none;
+  z-index: 0;
 }
-.orb2 {
-  width: 380px; height: 380px;
-  bottom: -80px; right: 140px;
-  background: radial-gradient(circle at 50% 50%, var(--purple-deep), color-mix(in srgb, var(--purple-deep) 30%, transparent) 60%, transparent 75%);
-}
-.orb3 {
-  width: 260px; height: 260px;
-  top: 60px; right: 280px;
-  background: radial-gradient(circle at 50% 50%, var(--cyan), color-mix(in srgb, var(--cyan) 15%, transparent) 60%, transparent 75%);
+
+.topLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 20;
+  background: linear-gradient(
+    90deg,
+    var(--ms-blue-dark) 0%,
+    var(--ms-blue) 50%,
+    var(--ms-blue-light) 100%
+  );
 }
 
 .content {
@@ -56,7 +74,12 @@
   font-size: 0.95rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #ec4899, #f472b6, #c084fc);
+  background: linear-gradient(
+    135deg,
+    var(--ms-blue-dark),
+    var(--ms-blue),
+    var(--ms-blue-light)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -81,7 +104,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, var(--accent), var(--cyan));
+  background: linear-gradient(135deg, var(--ms-blue), var(--ms-blue-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
