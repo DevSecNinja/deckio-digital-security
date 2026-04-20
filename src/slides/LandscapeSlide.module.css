@@ -89,6 +89,13 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.025);
+  background: color-mix(in srgb, var(--secondary) 85%, var(--accent));
+  border-color: color-mix(in srgb, var(--border) 60%, var(--accent));
 }
 
 .card::before {
@@ -135,6 +142,13 @@
   border-left: 3px solid var(--ms-blue);
   border-radius: 8px;
   padding: 16px 20px;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.callout:hover {
+  transform: scale(1.015);
+  background: color-mix(in srgb, var(--secondary) 85%, var(--accent));
+  border-color: color-mix(in srgb, var(--border) 60%, var(--accent));
 }
 
 .calloutIcon {
