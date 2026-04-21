@@ -43,7 +43,8 @@ export default function useReveal(index, totalGroups) {
     };
 
     document.addEventListener("keydown", handler, { capture: true });
-    return () => document.removeEventListener("keydown", handler, { capture: true });
+    return () =>
+      document.removeEventListener("keydown", handler, { capture: true });
   }, [isActive, visibleCount, totalGroups]);
 
   // Navigation button handler (capture phase on click — intercepts prev/next buttons)
@@ -78,7 +79,8 @@ export default function useReveal(index, totalGroups) {
     };
 
     document.addEventListener("click", handler, { capture: true });
-    return () => document.removeEventListener("click", handler, { capture: true });
+    return () =>
+      document.removeEventListener("click", handler, { capture: true });
   }, [isActive, visibleCount, totalGroups]);
 
   return visibleCount;

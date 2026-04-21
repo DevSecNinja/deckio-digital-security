@@ -22,7 +22,8 @@ const actions = [
 
 export default function IdentitySlide({ index }) {
   const visibleCount = useReveal(index, 4);
-  const rv = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+  const rv = (g) =>
+    `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ""}`;
 
   return (
     <Slide index={index} className={styles.identity}>
