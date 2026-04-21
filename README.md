@@ -1,65 +1,13 @@
-# Built with [DECKIO](https://deckio.art)
+# 🔐 Digital Security for Nonprofit Leaders
 
-## How to edit this deck?
+A strategic, non-technical presentation on digital security for nonprofit leaders and decision makers. Covers the current threat landscape, nonprofit-specific risks, identity and access management, data governance, building a security baseline, and fostering a security-aware culture.
 
-For a smooth ride, use `Dev Containers` locally or use `GitHub Codespaces`. That saves you from installing dependencies yourself. Once the container is up and running, the presentation starts in a simple browser session shared with GitHub Copilot and you can start editing.
+**Presented by** Jean-Paul van Ravensberg, Security Advisor & Architect · Microsoft Elevate
 
-If you want to run it directly on your machine:
+---
 
-```bash
-npm install
-npm run dev
-```
+## Built with DECKIO
 
-Open http://localhost:5173 in your browser.
+This presentation was built with [DECKIO](https://deckio.art) — an open platform for creating beautiful, code-driven presentations using React, Vite, and GitHub Copilot. DECKIO turns your repo into a live deck that you can edit conversationally with AI, hot-reload in real time, and deploy anywhere as a static site.
 
-Typical flow after GitHub Copilot is ready and the presentation is visible in Simple Browser:
-
-1. Ask GitHub Copilot to make the change you want.
-2. Let GitHub Copilot update the deck files for you.
-3. Review what changed.
-4. Look at the presentation and see the result immediately in real time, thanks to hot reload.
-5. If something feels off, ask GitHub Copilot to refine it and repeat.
-
-## GitHub Copilot in VS Code
-
-Do not make deck changes by editing code directly unless you really need to. This project is set up so GitHub Copilot in VS Code can do most of the work for you.
-
-Use GitHub Copilot Chat in Agent mode and describe the change you want. You can choose the model you like, but we recommend frontier models, `Claude Opus 4.6` or `GPT-5.3+`, for the best experience.
-
-The optimal flow is achieved with `Claude Opus 4.6` in fast mode.
-
-## What Copilot already knows
-
-This repo includes custom instructions and skills. Copilot already knows what files it should touch and what files it should leave alone.
-
-Useful skills:
-
-- `deck-add-slide` for creating a new slide and wiring it into `deck.config.js`
-- `deck-delete-slide` for removing a slide cleanly
-- `deck-inspect` for visually checking a rendered slide
-- `deck-port-powerpoint` for rebuilding a PowerPoint or PDF deck as native DECKIO slides
-- `deck-validate-project` for auditing the whole deck for consistency
-- `deck-sketch` for turning a rough whiteboard idea into a real slide
-
-## Prompt examples
-
-Use prompts like these instead of editing files yourself:
-
-- `Add a slide that explains the rollout phases for strategic customers.`
-- `Make this slide easier to scan and easier to present.`
-- `Remove the speaker invite slide.`
-- `Review this deck and fix anything that looks inconsistent or broken.`
-- `Create a customer case study slide that fits the style of the rest of the presentation.`
-- `Create a new slide based on my sketch.`
-- `Inspect the current progress, tell me what looks off, and make visual improvements.`
-
-## GitHub Copilot CLI
-
-Open GitHub Copilot CLI in this repo:
-
-Do you prefer TUIs? This works with GitHub Copilot CLI too.
-
-```bash
-gh copilot --yolo
-```
+Learn more at [deckio.art](https://deckio.art).
