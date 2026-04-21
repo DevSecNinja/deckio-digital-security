@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./DataGovernanceSlide.module.css";
 
 const pillars = [
@@ -26,6 +27,9 @@ const pillars = [
 ];
 
 export default function DataGovernanceSlide({ index }) {
+  const visibleCount = useReveal(index, 3);
+  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+
   return (
     <Slide index={index} className={styles.dataGovernance}>
       <div className={styles.angularPanel} />
@@ -42,10 +46,10 @@ export default function DataGovernanceSlide({ index }) {
         </div>
 
         <div className={styles.cards}>
-          {pillars.map((p) => (
+          {pillars.map((p, i) => (
             <div
               key={p.number}
-              className={styles.card}
+              className={`${styles.card} ${r(i + 1)}`}
             >
               <span className={styles.cardNumber}>{p.number}</span>
               <strong className={styles.cardTitle}>{p.title}</strong>

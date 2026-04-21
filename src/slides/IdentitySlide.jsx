@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./IdentitySlide.module.css";
 
 const actions = [
@@ -20,6 +21,9 @@ const actions = [
 ];
 
 export default function IdentitySlide({ index }) {
+  const visibleCount = useReveal(index, 4);
+  const rv = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+
   return (
     <Slide index={index} className={styles.identity}>
       <div className={styles.angularPanel} />
@@ -32,7 +36,7 @@ export default function IdentitySlide({ index }) {
         </div>
 
         <div className={styles.layout}>
-          <div className={styles.concept}>
+          <div className={`${styles.concept} ${rv(1)}`}>
             <p className={styles.conceptText}>
               The traditional network boundary no longer defines your
               organization&rsquo;s security. Today,{" "}
@@ -52,11 +56,11 @@ export default function IdentitySlide({ index }) {
           </div>
 
           <div className={styles.actions}>
-            <p className={styles.actionsLabel}>
+            <p className={`${styles.actionsLabel} ${rv(2)}`}>
               Three actions to protect your identities
             </p>
             {actions.map((a, i) => (
-              <div key={a.label} className={styles.action}>
+              <div key={a.label} className={`${styles.action} ${rv(i + 2)}`}>
                 <span className={styles.actionNum}>{i + 1}</span>
                 <div>
                   <strong className={styles.actionLabel}>{a.label}</strong>

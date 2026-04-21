@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./WorkflowRisksSlide.module.css";
 
 const risks = [
@@ -25,6 +26,9 @@ const risks = [
 ];
 
 export default function WorkflowRisksSlide({ index }) {
+  const visibleCount = useReveal(index, 4);
+  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+
   return (
     <Slide index={index} className={styles.workflowRisks}>
       <div className={styles.angularPanel} />
@@ -41,11 +45,11 @@ export default function WorkflowRisksSlide({ index }) {
         </div>
 
         <div className={styles.cards}>
-          {risks.map((r, i) => (
-            <div key={r.title} className={styles.card}>
+          {risks.map((rk, i) => (
+            <div key={rk.title} className={`${styles.card} ${r(i + 1)}`}>
               <span className={styles.cardNumber}>0{i + 1}</span>
-              <strong className={styles.cardTitle}>{r.title}</strong>
-              <p className={styles.cardDetail}>{r.detail}</p>
+              <strong className={styles.cardTitle}>{rk.title}</strong>
+              <p className={styles.cardDetail}>{rk.detail}</p>
             </div>
           ))}
         </div>

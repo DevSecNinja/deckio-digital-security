@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./BaselineSlide.module.css";
 
 const controls = [
@@ -35,6 +36,9 @@ const controls = [
 ];
 
 export default function BaselineSlide({ index }) {
+  const visibleCount = useReveal(index, 5);
+  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+
   return (
     <Slide index={index} className={styles.baseline}>
       <div className={styles.angularPanel} />
@@ -51,8 +55,8 @@ export default function BaselineSlide({ index }) {
         </div>
 
         <div className={styles.list}>
-          {controls.map((c) => (
-            <div key={c.number} className={styles.item}>
+          {controls.map((c, i) => (
+            <div key={c.number} className={`${styles.item} ${r(i + 1)}`}>
               <span className={styles.itemNumber}>{c.number}</span>
               <div className={styles.itemContent}>
                 <strong className={styles.itemTitle}>{c.title}</strong>

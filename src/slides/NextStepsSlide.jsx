@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./NextStepsSlide.module.css";
 
 const steps = [
@@ -41,6 +42,9 @@ const steps = [
 ];
 
 export default function NextStepsSlide({ index }) {
+  const visibleCount = useReveal(index, 4);
+  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+
   return (
     <Slide index={index} className={styles.nextSteps}>
       <div className={styles.angularPanel} />
@@ -57,8 +61,8 @@ export default function NextStepsSlide({ index }) {
         </div>
 
         <div className={styles.cards}>
-          {steps.map((s) => (
-            <div key={s.phase} className={styles.card}>
+          {steps.map((s, i) => (
+            <div key={s.phase} className={`${styles.card} ${r(i + 1)}`}>
               <div className={styles.cardPhase}>{s.phase}</div>
               <strong className={styles.cardAction}>{s.action}</strong>
               <ul className={styles.cardList}>

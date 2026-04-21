@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./NonprofitRiskSlide.module.css";
 
 const reasons = [
@@ -40,6 +41,9 @@ const reasons = [
 ];
 
 export default function NonprofitRiskSlide({ index }) {
+  const visibleCount = useReveal(index, 5);
+  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+
   return (
     <Slide index={index} className={styles.nonprofitRisk}>
       <div className={styles.angularPanel} />
@@ -55,7 +59,7 @@ export default function NonprofitRiskSlide({ index }) {
           </p>
         </div>
 
-        <div className={styles.dualBar}>
+        <div className={`${styles.dualBar} ${r(1)}`}>
           <div className={`${styles.dualSide} ${styles.dualOpportunity}`}>
             <span className={styles.dualIcon} aria-hidden="true">
               ⚡
@@ -84,16 +88,16 @@ export default function NonprofitRiskSlide({ index }) {
         </div>
 
         <div className={styles.cards}>
-          {reasons.map((r) => (
-            <div key={r.title} className={styles.card}>
+          {reasons.map((r_, i) => (
+            <div key={r_.title} className={`${styles.card} ${r(i + 2)}`}>
               <div className={styles.cardTop}>
                 <span className={styles.cardIcon} aria-hidden="true">
-                  {r.icon}
+                  {r_.icon}
                 </span>
-                <strong className={styles.cardTitle}>{r.title}</strong>
+                <strong className={styles.cardTitle}>{r_.title}</strong>
               </div>
               <ul className={styles.cardPoints}>
-                {r.points.map((p) => (
+                {r_.points.map((p) => (
                   <li key={p}>{p}</li>
                 ))}
               </ul>

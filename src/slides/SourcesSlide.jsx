@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./SourcesSlide.module.css";
 
 const sources = [
@@ -39,6 +40,10 @@ const sources = [
 ];
 
 export default function SourcesSlide({ index }) {
+  const visibleCount = useReveal(index, 4);
+  const r = (g) =>
+    `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ""}`;
+
   return (
     <Slide index={index} className={styles.sources}>
       <div className={styles.angularPanel} />
@@ -49,14 +54,13 @@ export default function SourcesSlide({ index }) {
           <p className={styles.eyebrow}>Transparency &amp; verification</p>
           <h2>Sources &amp; further reading</h2>
           <p className={styles.subtitle}>
-            Every claim here is traceable. Verify sources before sharing
-            externally.
+            Every reference in the deck is traceable.
           </p>
         </div>
 
         <div className={styles.list}>
-          {sources.map((s) => (
-            <div key={s.id} className={styles.source}>
+          {sources.map((s, i) => (
+            <div key={s.id} className={`${styles.source} ${r(i + 1)}`}>
               <span className={styles.sourceId}>{s.id}</span>
               <div className={styles.sourceContent}>
                 <strong className={styles.sourceClaim}>{s.label}</strong>

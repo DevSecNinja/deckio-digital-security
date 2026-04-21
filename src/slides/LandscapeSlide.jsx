@@ -1,4 +1,5 @@
 import { BottomBar, Slide } from "@deckio/deck-engine";
+import useReveal from "../hooks/useReveal";
 import styles from "./LandscapeSlide.module.css";
 
 const stats = [
@@ -26,6 +27,9 @@ const stats = [
 ];
 
 export default function LandscapeSlide({ index }) {
+  const visibleCount = useReveal(index, 2);
+  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+
   return (
     <Slide index={index} className={styles.landscape}>
       <div className={styles.angularPanel} />
@@ -40,7 +44,7 @@ export default function LandscapeSlide({ index }) {
           </p>
         </div>
 
-        <div className={styles.cards}>
+        <div className={`${styles.cards} ${r(1)}`}>
           {stats.map((s) => (
             <div
               key={s.value}
@@ -53,7 +57,7 @@ export default function LandscapeSlide({ index }) {
           ))}
         </div>
 
-        <div className={styles.callout}>
+        <div className={`${styles.callout} ${r(2)}`}>
           <span className={styles.calloutIcon} aria-hidden="true">
             🛡
           </span>
