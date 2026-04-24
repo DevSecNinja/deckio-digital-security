@@ -11,9 +11,10 @@ import { useSlides } from "@deckio/deck-engine";
  */
 export default function useReveal(index, totalGroups) {
   const { current } = useSlides();
-  const isExporting = () => document.documentElement.hasAttribute("data-export-mode");
+  const isExporting = () =>
+    document.documentElement.hasAttribute("data-export-mode");
   const [visibleCount, setVisibleCount] = useState(() =>
-    isExporting() ? totalGroups : 0
+    isExporting() ? totalGroups : 0,
   );
   const isActive = current === index;
 
@@ -29,7 +30,10 @@ export default function useReveal(index, totalGroups) {
         setVisibleCount(totalGroups);
       }
     });
-    observer.observe(html, { attributes: true, attributeFilter: ["data-export-mode"] });
+    observer.observe(html, {
+      attributes: true,
+      attributeFilter: ["data-export-mode"],
+    });
     return () => observer.disconnect();
   }, [totalGroups]);
 
