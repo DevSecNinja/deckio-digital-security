@@ -1,2 +1,14 @@
 @import "@deckio/deck-engine/styles/global.css";
 @import "./themes/microsoft/microsoft.css";
+
+/* ── Export: always capture at 1920 × 1080 (16:9), regardless of screen size ── */
+html[data-export-mode] .deck,
+html[data-export-mode] .slide {
+  width: 1920px !important;
+  height: 1080px !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
