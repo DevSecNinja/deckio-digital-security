@@ -11,13 +11,32 @@ import { useSlides } from "@deckio/deck-engine";
  */
 export default function useReveal(index, totalGroups) {
   const { current } = useSlides();
-  const [visibleCount, setVisibleCount] = useState(0);
+  const isExporting = () => document.documentElement.hasAttribute("data-export-mode");
+  const [visibleCount, setVisibleCount] = useState(() =>
+    isExporting() ? totalGroups : 0
+  );
   const isActive = current === index;
 
-  // Reset when slide becomes active
+  // Force full reveal whenever export mode is activated
   useEffect(() => {
-    if (isActive) setVisibleCount(0);
-  }, [isActive]);
+    const html = document.documentElement;
+    if (html.hasAttribute("data-export-mode")) {
+      setVisibleCount(totalGroups);
+      return;
+    }
+    const observer = new MutationObserver(() => {
+      if (html.hasAttribute("data-export-mode")) {
+        setVisibleCount(totalGroups);
+      }
+    });
+    observer.observe(html, { attributes: true, attributeFilter: ["data-export-mode"] });
+    return () => observer.disconnect();
+  }, [totalGroups]);
+
+  // Reset when slide becomes active (skip in export mode)
+  useEffect(() => {
+    if (isActive) setVisibleCount(isExporting() ? totalGroups : 0);
+  }, [isActive, totalGroups]);
 
   // Keyboard handler (capture phase — runs before engine)
   useEffect(() => {
