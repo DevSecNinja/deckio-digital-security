@@ -19,7 +19,7 @@ const agenda = [
   },
   {
     number: "04",
-    title: "Identity, access & data governance",
+    title: "Identity, access, & data governance",
     desc: "The three pillars of a sound organizational security posture",
   },
   {
