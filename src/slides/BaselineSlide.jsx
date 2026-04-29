@@ -7,7 +7,7 @@ const controls = [
     number: "1",
     title: "Enable MFA everywhere",
     detail:
-      "Multi-factor authentication is the single highest-impact control for blocking credential-based attacks. Require it for all users, especially administrators.",
+      "Multifactor authentication is the single highest-impact control for blocking credential-based attacks. Require it for all users, especially administrators.",
   },
   {
     number: "2",
@@ -37,7 +37,8 @@ const controls = [
 
 export default function BaselineSlide({ index }) {
   const visibleCount = useReveal(index, 5);
-  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+  const r = (g) =>
+    `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ""}`;
 
   return (
     <Slide index={index} className={styles.baseline}>

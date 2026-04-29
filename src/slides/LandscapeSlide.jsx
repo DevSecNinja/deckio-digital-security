@@ -28,7 +28,8 @@ const stats = [
 
 export default function LandscapeSlide({ index }) {
   const visibleCount = useReveal(index, 2);
-  const r = (g) => `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ''}`;
+  const r = (g) =>
+    `${styles.revealGroup} ${visibleCount >= g ? styles.revealed : ""}`;
 
   return (
     <Slide index={index} className={styles.landscape}>
@@ -40,16 +41,14 @@ export default function LandscapeSlide({ index }) {
           <p className={styles.eyebrow}>The Threat Landscape</p>
           <h2>AI has upgraded cyberattacks</h2>
           <p className={styles.subtitle}>
-            Threat actors are embedding AI across the full attack lifecycle—increasing precision, speed, and scale at every stage.
+            Threat actors are embedding AI across the full attack
+            lifecycle—increasing precision, speed, and scale at every stage.
           </p>
         </div>
 
         <div className={`${styles.cards} ${r(1)}`}>
           {stats.map((s) => (
-            <div
-              key={s.value}
-              className={styles.card}
-            >
+            <div key={s.value} className={styles.card}>
               <span className={styles.statValue}>{s.value}</span>
               <strong className={styles.statLabel}>{s.label}</strong>
               <p className={styles.statDetail}>{s.detail}</p>
@@ -72,7 +71,7 @@ export default function LandscapeSlide({ index }) {
               seized the infrastructure behind the operation, disrupting one of
               the most prolific credential-theft services in active use. For
               nonprofits, this is a reminder: even with MFA enabled, attackers
-              had toolkits specifically designed to get around it.
+              have toolkits specifically designed to get around it.
             </p>
           </div>
         </div>
